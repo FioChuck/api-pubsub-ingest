@@ -4,7 +4,8 @@ from google.cloud import pubsub_v1
 import json
 
 
-def fetch_api_results():
+def fetch_message():
+
     url = "https://data.alpaca.markets/v2/stocks/AAPL/trades/latest"
 
     key_id = os.getenv('KEY_ID')
@@ -39,6 +40,9 @@ def publish_message(data):
     return
 
 
-if __name__ == "__main__":
-    api_results = fetch_api_results()
+def main():
+    api_results = fetch_message()
     publish_message(api_results)
+
+
+main()
