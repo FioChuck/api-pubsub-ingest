@@ -1,7 +1,7 @@
 # Overview
 
 TL;DR
-A simple Python GCP Cloud Function that pulls stock data from https://alpaca.markets and publishes results to Google Cloud Pubsub.
+A simple Python GCP Cloud Function that pulls stock data from https://alpaca.markets and publishes results to Google Cloud PubSub.
 
 This project was built to demonstrate a straight forward and low cost option for ingesting application data for analytics.
 
@@ -26,9 +26,9 @@ An example Alpaca API response is shown below. The cloud function selects all at
 
 Application data is frequently exposed via APIs for integration. Frameworks like REST make _app-to-app_ integration and microservice architectures extremely simple; however, they pose a challenge for analytics teams relying on low code integration tools such as Alteryx, Azure Data Factory, Informatica, and Google Data Fusion.
 
-A serverless function can often bridge this gap and provide teams of analysts and data scientst an simple approach to ingesting application data for analytics.
+A serverless function can often bridge this gap and provide teams of analysts and data scientst a simple approach to ingesting application data for analytics.
 
-This repo contains Python code used to ingest data from an open REST API and publish results to Google PubSub for downstream consumption. For this project the a BigQuery subscription type was used to stream the results into BigQuery.
+This repo contains Python code used to ingest data from an open REST API and publish results to Google PubSub for downstream consumption. For this project the a BigQuery subscription type was used to stream the results into BigQuery.A BigQuery subscription in PubSub autmatically and effeciently streams data into BigQuery via the Storage API as messages are published.
 
 # Setup
 
