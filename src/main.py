@@ -47,5 +47,7 @@ def main(request):
     api_results = fetch_message()
     publish_message(api_results)
 
+    return 'success'
+
 
 # main('')
