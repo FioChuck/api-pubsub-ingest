@@ -46,3 +46,6 @@ def publish_message(data):
 def main(request):
     api_results = fetch_message()
     publish_message(api_results)
+
+
+# main('')
