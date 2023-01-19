@@ -25,4 +25,4 @@ jobs:
           source_dir: src
           entry_point: main
           runtime: python39
-          env_vars: "KEY_ID=${{secrets.KEY_ID}},SECRET_KEY=${{secrets.SECRET_KEY}},PROJECT_ID=${{secrets.PROJECT_ID}},TOPIC_ID=${{secrets.TOPIC_ID}}}"
+          env_vars: "KEY_ID=${{secrets.KEY_ID}},SECRET_KEY=${{secrets.SECRET_KEY}},PROJECT_ID=${{secrets.PROJECT_ID}},TOPIC_ID=${{secrets.TOPIC_ID}}"
