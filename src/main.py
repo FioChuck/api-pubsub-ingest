@@ -30,7 +30,7 @@ def publish_message(data):
     project_id = os.getenv('PROJECT_ID')
     topic_id = os.getenv('TOPIC_ID')
 
-    publisher = pubsub_v1.PublisherClient()
+    publisher = pubsub_v1.PublisherClient()  # instantiate client
 
     topic_path = publisher.topic_path(project_id, topic_id)
 
