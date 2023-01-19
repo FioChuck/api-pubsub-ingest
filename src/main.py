@@ -6,7 +6,10 @@ import json
 
 def fetch_message():
 
-    url = "https://data.alpaca.markets/v2/stocks/AAPL/trades/latest"
+    url = "https://data.alpaca.markets/v2/stocks/GOOGL/snapshot"
+
+    # https://data.alpaca.markets/v2/stocks/GOOGL/trades/latest
+    # https://data.alpaca.markets/v2/stocks/GOOGL/snapshot
 
     key_id = os.getenv('KEY_ID')
     secret_key = os.getenv('SECRET_KEY')
@@ -40,6 +43,6 @@ def publish_message(data):
     return
 
 
-def main():
+def main(request):
     api_results = fetch_message()
     publish_message(api_results)
